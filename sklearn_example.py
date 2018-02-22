@@ -22,9 +22,10 @@ texts = [
 	'私はラーメンが好きです',
 	'富士山は日本一高い山です',
 ]
+print(texts)
 
 # Bag of Words計算
 vectorizer = CountVectorizer(analyzer=tokenize)
 vectorizer.fit(texts)
 bow = vectorizer.transform(texts)
-pprint(bow)
+print(bow.toarray())
